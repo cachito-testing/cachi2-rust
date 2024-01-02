@@ -3,19 +3,21 @@
 This repository is meant to test a wide range of cases that can occur in Cachi2's processing of
 Rust.
 
-## Cases Covered
 
-- [ x ] Standard crates.io dependency
-- [ x ] crates.io dependency that is not pinned
-- [ x ] git dependency
-- [ x ] path dependency
-- [ x ] patched dependency
-- [ x ] workspaces
-- [ x ] workspace dependency inheritance
-- [   ] dev dependency
-- [   ] build dependency
-- [   ] dependency from non-standard registry
-- [   ] platform specific dependency
-- [   ] dependency with multiple-locations
+## Build script triggering test
 
-To see more about Cargo dependency types, check the [official docs](https://doc.rust-lang.org/cargo/reference/specifying-dependencies.html).
+This branch aims to demonstrate when the build scripts are triggered. It contains build scripts
+in the following locations:
+
+```
+.
+├── build.rs
+└── packages
+    ├── knights
+    │   └── build.rs
+    └── utils
+        └── build.rs
+```
+
+When executed, the build scripts will create files at `/tmp/rust-build-script-test`. They
+should only be executed when a `cargo build` or `cargo run` command is issued.
