@@ -12,10 +12,10 @@ Rust.
 - [ x ] patched dependency
 - [ x ] workspaces
 - [ x ] workspace dependency inheritance
-- [   ] dev dependency
-- [   ] build dependency
+- [ x ] dev dependency
+- [ x ] build dependency
 - [   ] dependency from non-standard registry
 - [   ] platform specific dependency
-- [   ] dependency with multiple-locations
+- [ x ] dependency with multiple-locations
 
 To see more about Cargo dependency types, check the [official docs](https://doc.rust-lang.org/cargo/reference/specifying-dependencies.html).
